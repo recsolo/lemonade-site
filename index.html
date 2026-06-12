@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Sensation Lemonade &amp; BBQ — Indy's Pop Up Shop</title>
+  <meta name="description" content="Sweet Sensation Lemonade & BBQ — Indy's pop up shop for fresh homemade lemonade and delicious BBQ. Stay tuned for the next pop up location!" />
+  <meta property="og:title" content="Sweet Sensation Lemonade & BBQ" />
+  <meta property="og:description" content="Indy's Pop Up Shop for Fresh Lemonade & BBQ. Fresh • Sweet • Homemade." />
+  <meta property="og:image" content="/assets/flyer.png" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pink: #ff2d8d;
+      --hot-pink: #ff0f7b;
+      --gold: #ffc62d;
+      --orange: #ff8a00;
+      --black: #0d0510;
+      --deep-purple: #1a0a22;
+      --cream: #fff6e8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--black);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    .glow-bg {
+      background:
+        radial-gradient(ellipse 60% 40% at 20% 0%, rgba(255, 45, 141, 0.25), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 85% 10%, rgba(255, 138, 0, 0.22), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255, 198, 45, 0.12), transparent 60%),
+        linear-gradient(180deg, var(--deep-purple) 0%, var(--black) 70%);
+    }
+
+    /* ===== Hero ===== */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 1.5rem 5rem;
+      position: relative;
+    }
+
+    .crown {
+      font-size: 2.2rem;
+      letter-spacing: 0.4rem;
+      color: var(--gold);
+      text-shadow: 0 0 18px rgba(255, 198, 45, 0.8);
+      margin-bottom: 0.5rem;
+    }
+
+    .brand-script {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      color: var(--pink);
+      text-shadow: 0 0 24px rgba(255, 45, 141, 0.65), 3px 3px 0 #5b0030;
+      transform: rotate(-4deg);
+      line-height: 1.1;
+    }
+
+    .brand-block {
+      font-family: "Lilita One", cursive;
+      font-size: clamp(3rem, 10vw, 6.5rem);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--orange) 55%, var(--hot-pink) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(3px 4px 0 rgba(0, 0, 0, 0.55)) drop-shadow(0 0 20px rgba(255, 138, 0, 0.4));
+      margin: 0.2rem 0 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .brand-sub {
+      font-family: "Lilita One", cursive;
+      font-size: clamp(1.3rem, 4vw, 2.2rem);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .brand-sub .l { color: var(--gold); }
+    .brand-sub .amp { color: var(--cream); }
+    .brand-sub .b { color: var(--pink); }
+
+    .tagline {
+      margin-top: 1rem;
+      font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.9;
+    }
+    .tagline .heart { color: var(--pink); }
+
+    .hero-banner {
+      margin-top: 2.5rem;
+      font-family: "Lilita One", cursive;
+      font-size: clamp(1.6rem, 5.5vw, 3rem);
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(100deg, var(--hot-pink), var(--orange));
+      padding: 0.6em 1.4em;
+      border-radius: 14px;
+      transform: rotate(-2deg);
+      box-shadow: 0 0 35px rgba(255, 15, 123, 0.5), 0 8px 0 rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-cta-row {
+      margin-top: 2.8rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      font-family: "Lilita One", cursive;
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      padding: 0.85em 1.8em;
+      border-radius: 999px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-3px) scale(1.03); }
+
+    .btn-pink {
+      color: #fff;
+      background: linear-gradient(135deg, var(--hot-pink), var(--pink));
+      box-shadow: 0 0 25px rgba(255, 45, 141, 0.55);
+    }
+
+    .btn-gold {
+      color: var(--black);
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      box-shadow: 0 0 25px rgba(255, 198, 45, 0.45);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 1.4rem;
+      font-size: 1.6rem;
+      color: var(--gold);
+      animation: bob 1.6s ease-in-out infinite;
+      text-decoration: none;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ===== Sections ===== */
+    section { padding: 5rem 1.5rem; }
+
+    .wrap { max-width: 1000px; margin: 0 auto; }
+
+    .section-title {
+      font-family: "Lilita One", cursive;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(90deg, var(--gold), var(--orange), var(--pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-kicker {
+      font-family: "Pacifico", cursive;
+      color: var(--pink);
+      text-align: center;
+      font-size: 1.3rem;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-lede {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 3rem;
+      opacity: 0.85;
+      line-height: 1.7;
+    }
+
+    /* Menu cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 198, 45, 0.25);
+      border-radius: 20px;
+      padding: 2rem 1.6rem;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: var(--pink);
+      box-shadow: 0 12px 40px rgba(255, 45, 141, 0.25);
+    }
+
+    .card .emoji { font-size: 2.8rem; display: block; margin-bottom: 0.8rem; }
+
+    .card h3 {
+      font-family: "Lilita One", cursive;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .card p { font-size: 0.95rem; line-height: 1.65; opacity: 0.85; }
+
+    /* Flyer section */
+    .flyer-section { text-align: center; }
+    .flyer-img {
+      width: 100%;
+      max-width: 440px;
+      border-radius: 22px;
+      box-shadow: 0 0 60px rgba(255, 45, 141, 0.35), 0 18px 50px rgba(0, 0, 0, 0.6);
+      transform: rotate(-1.5deg);
+      transition: transform 0.25s ease;
+    }
+    .flyer-img:hover { transform: rotate(0deg) scale(1.02); }
+
+    /* Next location */
+    .next-pop {
+      background:
+        radial-gradient(ellipse 80% 90% at 50% 0%, rgba(255, 15, 123, 0.18), transparent 65%),
+        rgba(255, 255, 255, 0.03);
+      border-top: 2px solid rgba(255, 45, 141, 0.4);
+      border-bottom: 2px solid rgba(255, 45, 141, 0.4);
+      text-align: center;
+    }
+
+    .stay-tuned {
+      font-family: "Pacifico", cursive;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: var(--cream);
+    }
+
+    .next-location {
+      font-family: "Lilita One", cursive;
+      font-size: clamp(2rem, 7vw, 3.6rem);
+      text-transform: uppercase;
+      color: var(--pink);
+      text-shadow: 0 0 25px rgba(255, 45, 141, 0.6);
+      margin: 0.4rem 0 1.6rem;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .badge {
+      font-family: "Lilita One", cursive;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      padding: 0.6em 1.3em;
+      border-radius: 999px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+    }
+    .badge.pink { border-color: var(--pink); color: var(--pink); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    footer .footer-tags {
+      font-family: "Lilita One", cursive;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+    footer .footer-tags .lemon { color: var(--gold); }
+    footer .footer-tags .bbq { color: var(--pink); }
+  </style>
+</head>
+<body class="glow-bg">
+
+  <!-- ===== Hero ===== -->
+  <header>
+    <div class="crown">👑</div>
+    <h1>
+      <span class="brand-script">Sweet</span><br />
+      <span class="brand-block">Sensation</span><br />
+      <span class="brand-sub"><span class="l">Lemonade</span> <span class="amp">&amp;</span> <span class="b">BBQ</span></span>
+    </h1>
+    <p class="tagline">Fresh <span class="heart">♥</span> Sweet <span class="heart">♥</span> Homemade</p>
+
+    <div class="hero-banner">Indy's Pop Up Shop</div>
+
+    <div class="hero-cta-row">
+      <a class="btn btn-pink" href="#next">Next Pop Up 📍</a>
+      <a class="btn btn-gold" href="#menu">See the Menu</a>
+    </div>
+
+    <a class="scroll-hint" href="#menu" aria-label="Scroll down">▼</a>
+  </header>
+
+  <!-- ===== Menu ===== -->
+  <section id="menu">
+    <div class="wrap">
+      <span class="section-kicker">What we're serving</span>
+      <h2 class="section-title">Fresh Lemonade &amp; BBQ</h2>
+      <p class="section-lede">
+        Everything is made from scratch with love — ice-cold fruit-infused lemonade
+        squeezed fresh, and slow-smoked BBQ seasoned to perfection.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <span class="emoji">🍋</span>
+          <h3>Fresh Lemonade</h3>
+          <p>Hand-squeezed and ice cold, loaded with real strawberries, peaches, raspberries, and blueberries. Fresh. Sweet. Homemade.</p>
+        </div>
+        <div class="card">
+          <span class="emoji">🍖</span>
+          <h3>Delicious BBQ</h3>
+          <p>Fall-off-the-bone ribs and smoked meats with a signature dry rub, grilled low and slow until they're smoky, juicy perfection.</p>
+        </div>
+        <div class="card">
+          <span class="emoji">🥗</span>
+          <h3>Homemade Sides</h3>
+          <p>Crisp, colorful slaw and classic cookout sides made fresh for every pop up — the perfect partner for your plate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Flyer ===== -->
+  <section class="flyer-section">
+    <div class="wrap">
+      <span class="section-kicker">The official flyer</span>
+      <h2 class="section-title">Sweet Sensation</h2>
+      <p class="section-lede">Save it, share it, and bring a friend to the next pop up.</p>
+      <img class="flyer-img" src="assets/flyer.png" alt="Sweet Sensation Lemonade & BBQ pop up shop flyer" />
+    </div>
+  </section>
+
+  <!-- ===== Next Pop Up ===== -->
+  <section id="next" class="next-pop">
+    <div class="wrap">
+      <p class="stay-tuned">Stay tuned for the…</p>
+      <h2 class="next-location">Next Pop Up Location ♥</h2>
+      <p class="section-lede">
+        Locations drop right here and on our socials. Check back soon — Indy, we're coming to a corner near you!
+      </p>
+      <a class="btn btn-pink" href="mailto:mnance9111@gmail.com?subject=Sweet%20Sensation%20Pop%20Up%20Updates">Get Updates ✉️</a>
+
+      <div class="badge-row">
+        <span class="badge">🍋 Fresh Lemonade</span>
+        <span class="badge pink">🔥 Delicious BBQ</span>
+        <span class="badge">🏙️ Indianapolis, IN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p class="footer-tags"><span class="lemon">Fresh Lemonade</span> ♥ <span class="bbq">Delicious BBQ</span></p>
+    <p>© 2026 Sweet Sensation Lemonade &amp; BBQ • Indianapolis, IN</p>
+  </footer>
+
+</body>
+</html>
